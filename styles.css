@@ -5,69 +5,12 @@
     --light-text: #333;
     --dark-text: #e0e0e0;
     --primary-color: #007bff;
-}
-
-/* Base Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--light-bg);
-    color: var(--light-text);
-    scroll-behavior: smooth;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Dark Mode */
-body.dark-mode {
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
-}
-
-/* Navbar */
-header, footer {
-    background-color: var(--primary-color);
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-button#theme-switch {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Sections */
-section {
-    padding: 50px 20px;
-}
-
-.gallery img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-right: 10px;
-}
-
-/* Global Styles */
-:root {
     --bg-color: #f0f4f8;
     --text-color: #272727;
     --card-bg: #ffffff;
     --shadow: rgba(0, 0, 0, 0.1);
-    --primary-color: #6200ea; /* Purple */
-    --secondary-color: #03dac6; /* Teal */
-    --accent-color: #ff4081; /* Pink */
+    --secondary-color: #03dac6;
+    --accent-color: #ff4081;
     --transition-speed: 0.3s;
 }
 
@@ -77,21 +20,16 @@ section {
     --card-bg: #1e1e1e;
     --shadow: rgba(255, 255, 255, 0.1);
     --primary-color: #bb86fc;
-    --secondary-color: #03dac6;
-    --accent-color: #ff4081;
 }
 
-* {
-    box-sizing: border-box;
-}
-
+/* Base Styles */
 body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
     transition: background-color var(--transition-speed) ease-in-out, color var(--transition-speed) ease-in-out;
 }
@@ -120,6 +58,27 @@ header {
     font-size: 2em;
     margin: 0;
     color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    justify-content: center;
+    margin: 0;
+}
+
+.nav-links li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color var(--transition-speed);
+}
+
+.nav-links li a:hover {
+    color: var(--accent-color);
 }
 
 /* Theme Switcher */
@@ -183,44 +142,8 @@ input:checked + .slider::before {
     background-color: var(--primary-color);
 }
 
-/* Optional: Change background color when toggled */
 input:checked + .slider {
     background-color: var(--primary-color);
-}
-
-/* Navigation Menu */
-nav {
-    flex: 1;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    justify-content: center;
-    margin: 0;
-}
-
-.nav-links li a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1em;
-    transition: color var(--transition-speed);
-}
-
-.nav-links li a:hover {
-    color: var(--accent-color);
-}
-
-/* Hamburger Menu Icon */
-.menu-icon {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: var(--text-color);
-    z-index: 2000;
 }
 
 /* Hero Section */
@@ -239,7 +162,6 @@ nav {
 .hero-content h2 {
     font-size: 3em;
     margin-bottom: 20px;
-    background-color: #e0e0e0;
 }
 
 .hero-content p {
