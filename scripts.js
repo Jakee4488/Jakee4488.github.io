@@ -1,39 +1,89 @@
-// Theme switcher logic
-const themeSwitch = document.getElementById('theme-switch');
-const body = document.body;
-
-// Check localStorage for the theme preference
-const currentTheme = localStorage.getItem('theme') || 'light';
-if (currentTheme === 'dark') {
-  body.classList.add('dark-mode');
-  themeSwitch.textContent = "Switch to Light Mode";
-} else {
-  themeSwitch.textContent = "Switch to Dark Mode";
+// Initialize animations (requires AOS script loaded before this file)
+if (window.AOS && typeof AOS.init === 'function') {
+    AOS.init();
 }
 
-themeSwitch.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
-  localStorage.setItem('theme', theme);
-  themeSwitch.textContent = theme === 'dark' ? "Switch to Light Mode" : "Switch to Dark Mode";
-});
+// Theme switcher logic using checkbox #theme-toggle and data-theme attribute
+(function setupThemeSwitcher() {
+    const themeToggle = document.getElementById('theme-toggle');
 
+    function getCurrentTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) return savedTheme;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
 
-export async function fetchGitHubRepos(username) {
-  const repoContainer = document.getElementById('github-repos');
-  const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=5`);
-  const repos = await response.json();
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (themeToggle) themeToggle.checked = theme === 'dark';
+    }
 
-  repos.forEach(repo => {
-      const repoDiv = document.createElement('div');
-      repoDiv.classList.add('repo');
-      repoDiv.innerHTML = `
-          <h3>${repo.name}</h3>
-          <p>${repo.description || 'No description available'}</p>
-          <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-      `;
-      repoContainer.appendChild(repoDiv);
-  });
-}
+    setTheme(getCurrentTheme());
+    if (themeToggle) {
+        themeToggle.addEventListener('change', () => {
+            const newTheme = themeToggle.checked ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+    }
+})();
 
-fetchGitHubRepos('Jakee4488');
+// Mobile hamburger menu toggle with accessibility
+(function setupMobileMenu() {
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+    if (!menuIcon || !navLinks) return;
+
+    const toggleMenu = () => {
+        const isActive = navLinks.classList.toggle('active');
+        menuIcon.setAttribute('aria-expanded', String(isActive));
+    };
+
+    menuIcon.addEventListener('click', toggleMenu);
+    menuIcon.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleMenu();
+        }
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach((anchor) => {
+        anchor.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuIcon.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // Reset on resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            navLinks.classList.remove('active');
+            menuIcon.setAttribute('aria-expanded', 'false');
+        }
+    });
+})();
+
+// Optional: Fetch latest GitHub repos if a container exists
+(function fetchLatestRepos() {
+    const repoContainer = document.getElementById('github-repos');
+    if (!repoContainer) return;
+
+    fetch('https://api.github.com/users/Jakee4488/repos?sort=updated&per_page=5')
+        .then((res) => res.json())
+        .then((repos) => {
+            repos.forEach((repo) => {
+                const repoDiv = document.createElement('div');
+                repoDiv.classList.add('repo');
+                repoDiv.innerHTML = `
+                    <h3>${repo.name}</h3>
+                    <p>${repo.description || 'No description available'}</p>
+                    <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                `;
+                repoContainer.appendChild(repoDiv);
+            });
+        })
+        .catch(() => {
+            // Silently ignore errors to avoid console noise on rate limits
+        });
+})();
