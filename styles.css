@@ -1,25 +1,29 @@
 /* Variables */
 :root {
-    --light-bg: #f4f4f4;
-    --dark-bg: #121212;
-    --light-text: #333;
-    --dark-text: #e0e0e0;
-    --primary-color: #007bff;
-    --bg-color: #f0f4f8;
-    --text-color: #272727;
+    --light-bg: #f8fafc;
+    --dark-bg: #0b1120;
+    --light-text: #0f172a;
+    --dark-text: #e5e7eb;
+    --primary-color: #4f46e5; /* Indigo 600 */
+    --secondary-color: #14b8a6; /* Teal 500 */
+    --accent-color: #e11d48; /* Rose 600 */
+    --accent-hover: #be123c; /* Rose 700 */
+    --bg-color: #f8fafc; /* Slate 50 */
+    --text-color: #0f172a; /* Slate 900 */
     --card-bg: #ffffff;
-    --shadow: rgba(0, 0, 0, 0.1);
-    --secondary-color: #03dac6;
-    --accent-color: #ff4081;
+    --shadow: rgba(2, 6, 23, 0.08);
     --transition-speed: 0.3s;
 }
 
 [data-theme="dark"] {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --card-bg: #1e1e1e;
-    --shadow: rgba(255, 255, 255, 0.1);
-    --primary-color: #bb86fc;
+    --bg-color: #0b1120;
+    --text-color: #e5e7eb;
+    --card-bg: #111827; /* Gray 900 */
+    --shadow: rgba(0, 0, 0, 0.5);
+    --primary-color: #818cf8; /* Indigo 400 */
+    --secondary-color: #2dd4bf; /* Teal 400 */
+    --accent-color: #fb7185; /* Rose 400 */
+    --accent-hover: #f43f5e; /* Rose 500 */
 }
 
 /* Base Styles */
@@ -205,7 +209,7 @@ input:checked + .slider {
 }
 
 .btn:hover {
-    background-color: #c51162;
+    background-color: var(--accent-hover);
     transform: translateY(-3px);
 }
 
@@ -477,7 +481,7 @@ h2 {
 }
 
 .contact-list li a:hover {
-    color: #c51162;
+    color: var(--accent-hover);
 }
 
 /* Footer */
