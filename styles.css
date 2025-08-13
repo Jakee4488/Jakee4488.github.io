@@ -60,6 +60,12 @@ header {
     color: var(--primary-color);
 }
 
+/* Mobile menu icon hidden by default (shown on mobile via media query) */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -79,6 +85,15 @@ header {
 
 .nav-links li a:hover {
     color: var(--accent-color);
+}
+
+/* Accessible focus styles */
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.contact-list a:focus-visible,
+.menu-icon:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
 }
 
 /* Theme Switcher */
