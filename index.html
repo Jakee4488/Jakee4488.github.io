@@ -1,256 +1,394 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-    <!-- Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
-    <meta name="description" content="Portfolio of Jacob Binu Mancherikalam — Software Developer and AI Specialist. Explore projects, skills, experience, and contact information.">
-    <title>Jacob's Portfolio</title>
+<html lang="en">
 
-    <!-- CSS Stylesheets Embedded -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Jacob Binu Mancherikalam — MLOps & AI Engineer. Specializing in scalable intelligent systems, cloud deployment, and full-stack AI applications.">
+    <title>Jacob Binu | MLOps & AI Engineer</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Open Props for Smooth Animations -->
-    <link rel="stylesheet" href="https://unpkg.com/open-props/easings.min.css">
-    <!-- Open Graph / SEO -->
-    <meta property="og:title" content="Jacob Binu Mancherikalam — Portfolio">
-    <meta property="og:description" content="Software Developer and AI Specialist. Projects, experience, and contact information.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jakee4488.github.io/">
-    <meta property="og:image" content="assets/images/Jacob.jpg">
-    <link rel="canonical" href="https://jakee4488.github.io/">
-    <link rel="icon" href="assets/images/Jacob.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Jacob Binu Mancherikalam",
-        "url": "https://jakee4488.github.io/",
-        "image": "assets/images/Jacob.jpg",
-        "jobTitle": "Software Developer",
-        "email": "mailto:jacobbinu4488car@gmail.com",
-        "telephone": "+447880490227",
-        "sameAs": [
-            "https://www.linkedin.com/in/jacob-binu-4a0596205",
-            "https://github.com/Jakee4488"
-        ]
-    }
-    </script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Custom CSS Styles -->
+    <!-- Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/Jacob.jpg">
 </head>
+
 <body>
-    <!-- Header Section -->
-    <header id="hero">
-        <div class="navbar">
-            <h1>Jacob Binu</h1>
-            <div class="menu-icon" id="menu-icon" role="button" tabindex="0" aria-label="Open navigation menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <nav>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="theme-switch-wrapper">
-                <label class="theme-switch">
-                    <input type="checkbox" id="theme-toggle">
-                    <span class="slider"></span>
-                </label>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Jacob Binu.</div>
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content" data-aos="zoom-in">
+            <p class="hero-subtitle">Hello, I'm</p>
+            <h1>Jacob Binu Mancherikalam</h1>
+            <p>MLOps & AI Engineer</p>
+            <div class="btn-group">
+                <a href="#projects" class="btn">View Work</a>
+                <a href="assets/pdfs/Jacob's_Cv_V7.pdf" class="btn" download
+                    style="background: transparent; border: 2px solid var(--primary-color);">Download CV</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-content" data-aos="zoom-in" id="hero-content">
-        <h2>Hi, I'm Jacob Binu Mancherikalam</h2>
-        <p>Software Developer | MLOps Engineer | AI Specialist</p>
-        <div class="btn-group">
-            <a href="#contact" class="btn">Contact Me</a>
-            <a href="assets/pdfs/Jacob%27s_Resume_v6.pdf" class="btn" download>Download CV</a>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 data-aos="fade-up">About Me</h2>
+            <div class="about-content" data-aos="fade-up">
+                <img src="assets/images/Jacob.jpg" alt="Jacob Binu" class="about-img">
+                <div class="about-text">
+                    <p>
+                        MLOps & AI Engineer specializing in the complete lifecycle of scalable intelligent systems. I
+                        combine expertise in the development and deployment of robust production-ready Machine Learning,
+                        LLM, and Agentic models on AWS, Azure, and GCP using Docker, Kubernetes, and CI/CD.
+                    </p>
+                    <p>
+                        I am proficient in bridging the gap between data science and application deployment by
+                        architecting full-stack interfaces (React, Flask) and optimized RESTful APIs. My expertise
+                        ranges from training deep learning models to orchestrating production deployments on Cloud
+                        environments. I am passionate about building automated, scalable pipelines that deliver
+                        high-performance AI solutions with seamless user experiences.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" data-aos="fade-up">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <img src="assets/images/Jacob.jpg" alt="Jacob Binu Mancherikalam" loading="lazy">
-                <p>Computer Science graduate specializing in Artificial Intelligence with 2 years of industry experience in software and full‑stack development, IT management, and AI/ML model deployment. Proficient in building responsive web apps (HTML, CSS, JavaScript/React) and back ends (Flask, Django), integrating REST APIs and databases (MySQL, PostgreSQL, SQLite). Hands‑on with Docker, Kubernetes, and cloud (AWS, GCP, Azure) for scalable deployments. Experienced in training and serving ML models using TensorFlow, Keras, and PyTorch, with CI/CD, reproducibility, and cost‑efficient optimization in production environments.</p>
-            </div>
-        </div>
-
     <!-- Skills Section -->
-    <section id="skills" data-aos="fade-up">
+    <section id="skills">
         <div class="container">
-            <h2>Technical Skills</h2>
-            <div class="skills-list">
-                <div data-aos="fade-right"><strong>Languages:</strong> Python, JavaScript, C++, C#, SQL, Java</div>
-                <div data-aos="fade-left"><strong>Web & Full‑Stack:</strong> Flask, Django, React, HTML, CSS, REST APIs</div>
-                <div data-aos="fade-right"><strong>ML & Deep Learning:</strong> scikit‑learn, TensorFlow, Keras, PyTorch; CNNs, RNNs, LSTMs, Transformers</div>
-                <div data-aos="fade-left"><strong>NLP & CV:</strong> GPTs, Open LLMs, RAG, OpenAI API, Hugging Face, LangChain, LangGraph, OpenCV</div>
-                <div data-aos="fade-right"><strong>Data & Messaging:</strong> NumPy, Pandas, SQLite, MySQL, MongoDB, Redis, Kafka</div>
-                <div data-aos="fade-left"><strong>Cloud & DevOps:</strong> Docker, Kubernetes, AWS, GCP, Azure, Azure DevOps, CI/CD</div>
-                <div data-aos="fade-right"><strong>Tools & OS:</strong> Git, MATLAB, Android Studio, VS Code; Windows, macOS, Linux</div>
+            <h2 data-aos="fade-up">Technical Skills</h2>
+            <div class="skills-grid">
+                <!-- Languages -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Bash/Shell</span>
+                        <span class="skill-tag">MATLAB</span>
+                    </div>
+                </div>
+
+                <!-- AI & GenAI -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-brain"></i> AI & GenAI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">LangGraph</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">LLMs (GPT, Llama)</span>
+                    </div>
+                </div>
+
+                <!-- Deep Learning -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fas fa-network-wired"></i> Deep Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">CNNs</span>
+                        <span class="skill-tag">RNNs</span>
+                        <span class="skill-tag">LSTMs</span>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">CUDA/cuDNN</span>
+                    </div>
+                </div>
+
+                <!-- MLOps & Cloud -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <h3><i class="fas fa-cloud"></i> MLOps & Cloud</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Azure DevOps</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Databricks</span>
+                        <span class="skill-tag">MLflow</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+
+                <!-- Data Engineering -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                    <h3><i class="fas fa-database"></i> Data Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PySpark</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">AWS Glue</span>
+                    </div>
+                </div>
+
+                <!-- Full Stack -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+                    <h3><i class="fas fa-layer-group"></i> Full Stack</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" data-aos="fade-up">
+    <section id="experience">
         <div class="container">
-            <h2>Professional Experience</h2>
+            <h2 data-aos="fade-up">Work Experience</h2>
             <div class="timeline">
-                <div class="timeline-item" data-aos="fade-right">
-                    <h3>MLOps Engineer</h3>
-                    <p><em>Coventry Building Society, Coventry</em></p>
-                    <p><strong>January 2025 - Present</strong></p>
-                    <ul>
-                        <li>Evaluated and implemented ML platforms; led proof‑of‑value initiatives to assess capabilities and integration potential.</li>
-                        <li>Collaborated with data science and engineering teams to build scalable data pipelines using Python, Pandas, PySpark, and SAS.</li>
-                        <li>Drove MLOps best practices for reproducibility, versioning, and automated deployments across environments.</li>
-                    </ul>
+
+                <!-- Job 1 -->
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="content">
+                        <h3>MLOps Engineer</h3>
+                        <p><em>Coventry Building Society, Coventry</em></p>
+                        <p><strong>January 2025 - Present</strong></p>
+                        <ul>
+                            <li>Establish comprehensive MLOps best practices, creating automated workflows for model
+                                versioning, reproducibility, and CI/CD deployment.</li>
+                            <li>Deploy critical Credit Risk models (IRB & IFRS9) within the analytics platform using
+                                Python.</li>
+                            <li>Engineer serverless ETL pipelines using AWS Glue, automating complex data manipulation
+                                and loading into Amazon Redshift.</li>
+                            <li>Architect and maintain scalable data frameworks using Python, PySpark, and SAS.</li>
+                            <li>Spearhead Proof-of-Value initiatives for emerging ML platforms.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="timeline-item" data-aos="fade-left">
-                    <h3>IT Engineer</h3>
-                    <p><em>Tata Motors Design Tech Centre, Coventry</em></p>
-                    <p><strong>August 2022 - August 2023</strong></p>
-                    <ul>
-                        <li>Automated OS deployment, reducing manual intervention by 80% and saving 30 hours per cycle.</li>
-                        <li>Increased IT ticket closure rate from 50% to 100% in six months.</li>
-                        <li>Led migration of users from Remote Desktop to TeamViewer, enhancing productivity and support efficiency.</li>
-                    </ul>
+
+                <!-- Job 2 -->
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="content">
+                        <h3>IT Engineer</h3>
+                        <p><em>Tata Motors Design Tech Centre, Coventry</em></p>
+                        <p><strong>August 2022 - August 2023</strong></p>
+                        <ul>
+                            <li>Engineered an autonomous OS deployment pipeline for Windows 11, reducing manual
+                                intervention by 80%.</li>
+                            <li>Developed robust automation scripts using PowerShell and Bash to streamline automation.
+                            </li>
+                            <li>Optimized IT incident response workflows, driving the ticket closure rate from 50% to
+                                100% within six months.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="timeline-item" data-aos="fade-right">
-                    <h3>Assistant IT Manager</h3>
-                    <p><em>Mancherikalam Supermarket, Kottayam</em></p>
-                    <p><strong>April 2020 - July 2021</strong></p>
-                    <ul>
-                        <li>Introduced a supplier information tracking system, improving stock auditing and reordering efficiency by 30%.</li>
-                        <li>Enhanced customer service and trained new employees, leading to increased client satisfaction.</li>
-                    </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 data-aos="fade-up">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3>Knowledge Graph RAG System</h3>
+                        <p>Implementation of a GraphRAG system using a Flask application with the Ollama API and locally
+                            built models, leveraging graph-based structures for advanced query retrieval.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Jakee4488" target="_blank" class="project-link"><i
+                                    class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-cubes"></i></div>
+                        <h3>End-to-end MLOps with Databricks</h3>
+                        <p>A complete, end-to-end MLOps architecture built on the Databricks platform. Features data
+                            preparation, model training with MLflow, registration, and serving.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Jakee4488" target="_blank" class="project-link"><i
+                                    class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-robot"></i></div>
+                        <h3>Context-Aware Chatbot (RAG)</h3>
+                        <p>A context-aware chatbot built using a Retrieval-Augmented Generation (RAG) framework,
+                            leveraging state-of-the-art LLMs like OpenAI’s GPT and Meta’s Llama.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Jakee4488/CustomGPT-RAG" target="_blank" class="project-link"><i
+                                    class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-biohazard"></i></div>
+                        <h3>Toxicity Classification Pipeline</h3>
+                        <p>A complete Python solution for classifying mushrooms as edible or poisonous using various ML
+                            algorithms, transformed into a reliable, production-ready system via MLOps.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Jakee4488/Mushroom_Classification" target="_blank"
+                                class="project-link"><i class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-leaf"></i></div>
+                        <h3>CNN Plant Disease Classification</h3>
+                        <p>A production-ready MLOps system for classifying plant diseases using CNNs. Transforms a
+                            research notebook into a scalable, reproducible, and automated ML pipeline.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Jakee4488/PlantDiseases_CNN_Classification" target="_blank"
+                                class="project-link"><i class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Twitter Sentiment Analysis</h3>
+                        <p>A production-ready Flask application that analyses real-time tweets from financial
+                            influencers using advanced NLP sentiment analysis to track market sentiment.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Jakee4488" target="_blank" class="project-link"><i
+                                    class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" data-aos="fade-up">
+    <section id="education">
         <div class="container">
-            <h2>Education</h2>
-            <div class="education">
-                <div class="education-item" data-aos="fade-right">
-                    <h3>Bachelor of Science (Hons) in Computer Science with AI</h3>
-                    <p><em>Coventry University, Coventry, United Kingdom</em></p>
-                    <p><strong>Graduation:</strong> July 2024 | <strong>Grade:</strong> First Class Honours</p>
+            <h2 data-aos="fade-up">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="content">
+                        <h3>BSc Computer Science with AI</h3>
+                        <p><em>Coventry University</em></p>
+                        <p><strong>2021 - 2024</strong></p>
+                        <p><strong>Grade:</strong> First Class Honors</p>
+                        <p><strong>Key Modules:</strong> Artificial Neural Networks & Intelligent Agents, Machine
+                            Learning, Advanced Algorithms.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Certifications Section -->
-    <section id="certifications" data-aos="fade-up">
+    <section id="certifications">
         <div class="container">
-            <h2>Certifications</h2>
-            <div class="certifications">
-                <div class="certification-item" data-aos="fade-right">
-                    <h3>CCNA: Enterprise Networking, Security, and Automation</h3>
-                    <p>Cisco</p>
-                    <p><strong>Date:</strong> 2023</p>
+            <h2 data-aos="fade-up">Certifications</h2>
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up">
+                    <h3>Cisco</h3>
+                    <p>CCNA: Enterprise Networking, Security, and Automation (2023)</p>
                 </div>
-                <div class="certification-item" data-aos="fade-left">
-                    <h3>Generative AI: Working with Large Language Models</h3>
-                    <p>Google Cloud</p>
-                    <p><strong>Date:</strong> 2023</p>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Google Cloud</h3>
+                    <p>Generative AI: Working with Large Language Models (2023)</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects" data-aos="fade-up">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card" data-aos="flip-left">
-                    <h3>Context-Aware Chatbot Using RAG Framework</h3>
-                    <a href="https://github.com/Jakee4488/CustomGPT-RAG" target="_blank" rel="noopener noreferrer">
-                        <img src="https://img.icons8.com/color/60/000000/ai.png" alt="Chatbot Icon">
-                    </a>
-                    <p>Developed a chatbot using the Retrieval Augmented Generation (RAG) framework with OpenAI’s GPT and Meta’s Llama2.</p>
-                </div>
-                <!-- Project 2 -->
-                <div class="project-card" data-aos="flip-right">
-                    <h3>Autonomous OS Deployment System</h3>
-                    <a href="https://github.com/Jakee4488/OS_Deployment_System" target="_blank" rel="noopener noreferrer">
-                        <img src="https://img.icons8.com/color/60/000000/server.png" alt="OS Deployment Icon">
-                    </a>
-                    <p>Automated OS deployment for centralized imaging, reducing manual labor and boosting efficiency at Tata Motors.</p>
-                </div>
-                <!-- Project 3 -->
-                <div class="project-card" data-aos="flip-left">
-                    <h3>Plant Disease Classification</h3>
-                    <a href="https://github.com/Jakee4488/PlantDiseases_CNN_Classification" target="_blank" rel="noopener noreferrer">
-                        <img src="https://img.icons8.com/color/60/000000/plant.png" alt="Plant Icon">
-                    </a>
-                    <p>Used CNN architectures to classify plant diseases with high accuracy, aiding in agricultural management.</p>
-                </div>
-                <!-- Project 4 -->
-                <div class="project-card" data-aos="flip-right">
-                    <h3>Mushroom Classification Analysis</h3>
-                    <a href="https://github.com/Jakee4488/Mushroom_Classification" target="_blank" rel="noopener noreferrer">
-                        <img src="https://img.icons8.com/color/60/000000/mushroom.png" alt="Mushroom Icon">
-                    </a>
-                    <p>Performed comparative analysis of various machine learning algorithms, optimizing F1 scores for mushroom classification.</p>
-                </div>
-                <!-- Project 5 -->
-                <div class="project-card" data-aos="flip-left">
-                    <h3>Secure Online Bookshop</h3>
-                    <a href="https://github.com/Jakee4488/BookShop2-6005-secure-v2" target="_blank" rel="noopener noreferrer">
-                        <img src="https://img.icons8.com/color/60/000000/book.png" alt="Bookshop Icon">
-                    </a>
-                    <p>Developed a secure online bookshop with robust cybersecurity measures including RSA encryption for user data protection.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!-- Contact Section -->
-    <section id="contact" data-aos="fade-up">
+    <section id="contact">
         <div class="container">
-            <h2>Contact Me</h2>
-            <ul class="contact-list">
-                <li><a href="mailto:jacobbinu4488car@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
-                <li><a href="https://linkedin.com/in/jacob-binu-4a0596205" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                <li><a href="https://github.com/Jakee4488" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
-                <li><a href="tel:+447880490227"><i class="fas fa-phone"></i> +44 7880490227</a></li>
-            </ul>
+            <h2 data-aos="fade-up">Get In Touch</h2>
+            <div class="contact-list" data-aos="zoom-in">
+                <a href="mailto:jacobbinu4488car@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://linkedin.com/in/jacob-binu-4a0596205" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/Jakee4488" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="tel:+447880490227">
+                    <i class="fas fa-phone"></i>
+                    <span>Phone</span>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Jacob Binu Mancherikalam. All Rights Reserved.</p>
+        <p>&copy; 2025 Jacob Binu Mancherikalam. All Rights Reserved.</p>
     </footer>
 
-    <!-- JS and Animation Initialization -->
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="scripts.js" defer></script>
+    <script src="scripts.js"></script>
 </body>
+
 </html>

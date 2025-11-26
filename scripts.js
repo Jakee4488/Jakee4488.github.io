@@ -1,89 +1,39 @@
-// Initialize animations (requires AOS script loaded before this file)
-if (window.AOS && typeof AOS.init === 'function') {
-    AOS.init();
-}
+// Initialize AOS (Animate On Scroll)
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+});
 
-// Theme switcher logic using checkbox #theme-toggle and data-theme attribute
-(function setupThemeSwitcher() {
-    const themeToggle = document.getElementById('theme-toggle');
+// Mobile Menu Toggle
+const menuIcon = document.getElementById('menu-icon');
+const navLinks = document.getElementById('nav-links');
+const navLinksItems = document.querySelectorAll('.nav-links a');
 
-    function getCurrentTheme() {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) return savedTheme;
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
+menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Animate icon (optional simple rotation or change)
+    menuIcon.classList.toggle('active');
+});
 
-    function setTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        if (themeToggle) themeToggle.checked = theme === 'dark';
-    }
-
-    setTheme(getCurrentTheme());
-    if (themeToggle) {
-        themeToggle.addEventListener('change', () => {
-            const newTheme = themeToggle.checked ? 'dark' : 'light';
-            setTheme(newTheme);
-        });
-    }
-})();
-
-// Mobile hamburger menu toggle with accessibility
-(function setupMobileMenu() {
-    const menuIcon = document.getElementById('menu-icon');
-    const navLinks = document.getElementById('nav-links');
-    if (!menuIcon || !navLinks) return;
-
-    const toggleMenu = () => {
-        const isActive = navLinks.classList.toggle('active');
-        menuIcon.setAttribute('aria-expanded', String(isActive));
-    };
-
-    menuIcon.addEventListener('click', toggleMenu);
-    menuIcon.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            toggleMenu();
-        }
+// Close mobile menu when a link is clicked
+navLinksItems.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuIcon.classList.remove('active');
     });
+});
 
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach((anchor) => {
-        anchor.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            menuIcon.setAttribute('aria-expanded', 'false');
-        });
-    });
+// Navbar Scroll Effect (Glassmorphism intensity change)
+const navbar = document.querySelector('.navbar');
 
-    // Reset on resize
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            navLinks.classList.remove('active');
-            menuIcon.setAttribute('aria-expanded', 'false');
-        }
-    });
-})();
-
-// Optional: Fetch latest GitHub repos if a container exists
-(function fetchLatestRepos() {
-    const repoContainer = document.getElementById('github-repos');
-    if (!repoContainer) return;
-
-    fetch('https://api.github.com/users/Jakee4488/repos?sort=updated&per_page=5')
-        .then((res) => res.json())
-        .then((repos) => {
-            repos.forEach((repo) => {
-                const repoDiv = document.createElement('div');
-                repoDiv.classList.add('repo');
-                repoDiv.innerHTML = `
-                    <h3>${repo.name}</h3>
-                    <p>${repo.description || 'No description available'}</p>
-                    <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                `;
-                repoContainer.appendChild(repoDiv);
-            });
-        })
-        .catch(() => {
-            // Silently ignore errors to avoid console noise on rate limits
-        });
-})();
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+        navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
+    } else {
+        navbar.style.background = 'rgba(10, 10, 10, 0.8)';
+        navbar.style.boxShadow = 'none';
+    }
+});
