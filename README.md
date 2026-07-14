@@ -1,36 +1,60 @@
 # Hi there, I'm Jacob Binu 👋
 
-I'm an **MLOps Engineer** and **Software Developer** with a specialization in Artificial Intelligence.
+**MLOps Engineer** at Coventry Building Society, specialising in scalable ML pipelines, cloud-native deployment, and production-grade AI/agentic systems.
 
-I am a First Class Honours graduate in Computer Science with AI from Coventry University. I have 2 years of industry experience focusing on full-stack development, IT management, and deploying scalable AI models in production environments using AWS and GCP.
+I'm a First Class Honours graduate in Computer Science with AI from Coventry University. I bridge data science and software engineering — deploying regulated credit risk models, building serverless ETL pipelines on AWS, and shipping full-stack AI applications with React, Django, and Flask/FastAPI.
 
-* **[Porfolio website](https://jakee4488.github.io/)**
+* **[Portfolio website](https://jakee4488.github.io/)**
+
+---
+
+## 💼 Currently
+
+* 🏦 Building MLOps workflows for model versioning, reproducibility, and CI/CD around **regulated credit risk models (IRB & IFRS9)** at Coventry Building Society
+* 🤖 Leading Proof-of-Value initiatives evaluating enterprise agentic AI platforms, with a focus on explainability and governance
+* ☁️ Engineering serverless ETL pipelines (AWS Glue → Redshift) and scalable data frameworks with Python, PySpark, and SAS
+
 ---
 
 ## 🚀 My Tech Stack
 
-* **AI & Machine Learning:** Python, TensorFlow, Keras, PyTorch, scikit-learn, CNNs, Transformers
-* **NLP & CV:** LangChain, LangGraph, Hugging Face Transformers, OpenAI API, RAG, OpenCV
-* **Cloud & DevOps:** AWS, GCP, Azure, Docker, Kubernetes, CI/CD
-* **Web & Full-Stack:** React, Flask, Django, HTML/CSS, JavaScript
+* **AI & GenAI:** PyTorch, TensorFlow, Keras, Scikit-learn, OpenCV, Hugging Face Transformers, LangChain, LangGraph, CrewAI, RAG Architectures, LLMs (OpenAI, Claude, Llama), FAISS, Pinecone, Vertex AI, MCP
+* **MLOps & Cloud:** AWS, Azure, GCP, Docker, Kubernetes, Terraform, Databricks, MLflow, Azure DevOps, CI/CD
+* **Data Engineering:** PySpark, Pandas, NumPy, Kafka, Redis, AWS Glue, Airflow, SAS
+* **Full-Stack Development:** React, Flask, Django, FastAPI, RESTful APIs, HTML5/CSS3
 * **Databases:** MySQL, PostgreSQL, MongoDB, SQLite
+* **Languages:** Python, SQL, C++, JavaScript, Bash, SAS, YAML
 
 ---
 
 ## 📂 Featured Projects
 
-Here are a few projects you can find on my GitHub:
+* **💬🤖 [TracerLensAi](https://github.com/Jakee4488/TracerLensAi)**: Cloud-native AI chat interface powered by Google Gemini, providing an interactive workspace for agentic workflows with causal reasoning, live code execution, and web search — backed by a production-grade GCP deployment pipeline.
 
-## 🚀 Project Portfolio
+* **🧠🔀 [Deep Agents from Scratch](https://github.com/Jakee4488/deep-agents-from-scratch)**: AI agent framework built with LangGraph & Claude, showcasing task planning, virtual file systems, sub-agents for multistep reasoning, ReAct loops, Pydantic state management, and async Python orchestration.
 
-* **💬🤖 [Context-Aware Chatbot Using RAG Framework](https://github.com/Jakee4488/CustomGPT-RAG)**: My dissertation project, creating a context-aware chatbot using state-of-the-art LLMs (like GPT and Llama2) and a Retrieval Augmented Generation (RAG) framework.
+* **🕸️🔍 [Knowledge Graph RAG System](https://github.com/Jakee4488/Graphrag-flaskapp)**: GraphRAG system built with Flask, integrating the Ollama API and local models for enhanced context-aware queries and reasoning using graph structures.
 
-* **🛠️🔄 [End-to-end MLOps with Databricks](https://github.com/Jakee4488/MLOps_Databricks_Project)**: This repository provides a simple, end-to-end MLOps architecture implemented within the Databricks platform. It includes a minimal, working machine learning project that demonstrates the key stages of an MLOps lifecycle, including data preparation, model training and tracking (using MLflow), model registration, and batch inference or serving.
+* **🛠️🔄 [End-to-end MLOps with Databricks](https://github.com/Jakee4488/MLOps_Databricks_Project)**: Minimal, production-ready ML workflow on Databricks covering data prep, model training and tracking with MLflow, model registration, and batch inference/serving.
 
-* **🌿🔬 [CNN for Plant Disease Classification](https://github.com/Jakee4488/PlantDiseases_CNN_Classification)**: A comparative analysis of various Convolutional Neural Network (CNN) architectures to evaluate performance in detecting and classifying plant diseases.
+* **📈🏦 [Financial AI MLOps](https://github.com/Jakee4488/Financial_AI_MLOps)**: Enterprise-grade MLOps on Databricks for real-time anomaly detection in finance, featuring streaming data ingestion, automated model retraining, and continuous production deployment.
 
-* **🍄💻 [Mushroom Classification Analysis](https://github.com/Jakee4488/Mushroom_Prediction_ML_project)**: 🍄Mushroom Classification with MLOps. This repository contains a complete Python solution for classifying mushrooms as edible or poisonous using various Machine Learning algorithms. More importantly, it demonstrates how to transform an experimental ML model into a reliable, production-ready system through the adoption of MLOps principles.
-* **🕸️📊 [GraphRag-Neo4j_llama3.1](https://github.com/Jakee4488/GraphRag-Neo4j_llama3.1)**: GraphRag-Neo4j_llama3.1 is an implementation of Graph RAG using Neo4j and llama_3.1. This project aims to leverage the power of graph databases and machine learning for advanced relational data processing and analysis.
+* **🌿🔬 [CNN for Plant Disease Classification](https://github.com/Jakee4488/PlantDiseases_CNN_Classification)**: Scalable MLOps system classifying plant diseases (Healthy, Powdery, Rust) with CNNs, turning research into an automated ML pipeline for deployment and lifecycle management.
+
+* **📊💬 [Twitter Sentiment Analysis for Financial Markets](https://github.com/Jakee4488/Twitter_Sentiment_Analysis)**: Flask app for real-time tweet sentiment analysis from top financial influencers using NLP, tracking market sentiment and displaying trends via a dashboard.
+
+---
+
+## 🎓 Certifications
+
+* CCNA: Enterprise Networking, Security, and Automation
+* CCNA: Switching, Routing, and Wireless Essentials
+* Introduction to LangGraph: AI Agentic Workflow with LangGraph
+* Advanced Machine Learning with Databricks
+* Advanced Machine Learning Operations with Databricks
+* Learning Kubernetes: Kubernetes for Container Autoscaling
+* Learning Docker: Docker for Containerization
+* Generative AI: Working with Large Language Models
 
 ---
 
