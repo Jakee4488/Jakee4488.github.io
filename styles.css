@@ -164,6 +164,43 @@ a {
   background: rgba(242, 163, 60, .08);
 }
 
+/* ---------- mobile nav toggle ---------- */
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 0 auto;
+  background: var(--text-dim);
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ---------- scroll bar (narrow screens) ---------- */
 
 .runbar {
@@ -1043,7 +1080,35 @@ a {
 @media (max-width: 620px) {
   body { font-size: 16px; }
 
-  .topnav a:not(.topnav-cta) { display: none; }
+  .nav-toggle { display: flex; }
+
+  .topnav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px clamp(20px, 5vw, 56px) 16px;
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--line-soft);
+    display: none;
+  }
+
+  .topnav.is-open {
+    display: flex;
+  }
+
+  .topnav a:not(.topnav-cta) {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .topnav-cta {
+    margin-top: 12px;
+    text-align: center;
+  }
 
   .signals li { gap: 12px; }
   .signal-num { font-size: 1.3rem; min-width: 54px; }

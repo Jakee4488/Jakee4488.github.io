@@ -78,6 +78,31 @@
     targets.forEach(function (el) { observer.observe(el); });
   }
 
+  /* ---- mobile nav toggle ---- */
+
+  var navToggle = document.getElementById("nav-toggle");
+  var topnav = document.getElementById("topnav");
+
+  if (navToggle && topnav) {
+    var closeMenu = function () {
+      navToggle.setAttribute("aria-expanded", "false");
+      topnav.classList.remove("is-open");
+    };
+
+    navToggle.addEventListener("click", function () {
+      var isOpen = topnav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    topnav.addEventListener("click", function (event) {
+      if (event.target.tagName === "A") closeMenu();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closeMenu();
+    });
+  }
+
   /* ---- footer year ---- */
 
   var year = document.getElementById("year");
